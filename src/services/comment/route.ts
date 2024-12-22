@@ -6,6 +6,6 @@ const commentRouter = Router();
 
 commentRouter.use(validateTokenAndRole());
 commentRouter.post("/", commentController.createComment);
-commentRouter.get("/", commentController.getComments);
+commentRouter.post("/get", commentController.getComments);
 
 export default commentRouter;
