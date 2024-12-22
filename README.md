@@ -84,27 +84,10 @@ For testing purposes, you can use the following credentials to log in as an admi
 - Email: adesokanemmanuelfemzy2018@gmail.com
 - Password: 12345678
 
-## **Project Structure**
+## **Testing**
 
-```plaintext
-├── src
-│   ├── auth
-│   │   ├── controller.js       # Handles authentication logic (sign-in, sign-up, refresh token)
-│   │   ├── routes.js           # Authentication routes
-│   │   ├── middleware.js       # Middleware for token validation and role checking
-│   ├── projects
-│   │   ├── controller.js       # Handles project management logic (CRUD operations)
-│   │   ├── routes.js           # Project-related routes
-│   ├── issues
-│   │   ├── controller.js       # Handles issue tracking logic (create, assign, update, list)
-│   │   ├── routes.js           # Issue-related routes
-│   ├── comments
-│   │   ├── controller.js       # Handles comment logic (add and retrieve comments)
-│   │   ├── routes.js           # Comment-related routes
-│   ├── utils
-│   │   ├── logger.js           # Utility for logging application events
-│   │   ├── errorHandler.js     # Centralized error handling utility
-├── .env                         # Environment configuration file
-├── package.json                 # Project dependencies and scripts
-├── README.md                    # Documentation for the project
+To run tests, use the following command :
+
+```bash
+npm run test
 ```
