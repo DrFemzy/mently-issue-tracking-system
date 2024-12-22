@@ -5,7 +5,7 @@ import { validateTokenAndRole } from "../../middleware";
 const issueRouter = Router();
 
 issueRouter.use(validateTokenAndRole());
-issueRouter.post("/", issueController.getIssues);
+issueRouter.post("/get", issueController.getIssues);
 issueRouter.patch("/:issueId", issueController.updateIssue);
 
 issueRouter.use(validateTokenAndRole(["PROJECT-MANAGER", "ADMIN"]));

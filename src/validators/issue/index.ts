@@ -16,6 +16,13 @@ export const assignIssueValidator = z
   })
   .strict();
 
+export const updateIssueValidator = z.object({
+  status: z.enum(["Open", "In Progress", "Closed"]).optional(),
+  priority: z.enum(["Low", "Medium", "High"]).optional(),
+  title: z.string().min(1).optional(),
+  description: z.string().min(1).optional(),
+});
+
 export const getIssuesValidator = z
   .object({
     page: z.number().optional(),
