@@ -64,6 +64,7 @@ export class IssueController {
     });
   }
 
+  @ServiceDecorator.forRequestPayloadValidation(updateIssue)
   @ServiceDecorator.forCatchingErrorAndSendingToClient()
   async updateIssue(req: Request, res: Response) {
     const { issueId } = req.params;
