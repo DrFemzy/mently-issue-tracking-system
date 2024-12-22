@@ -1,0 +1,1 @@
+export type ExtractComminAtrributeFromUnion<A, B extends A > =  A;
