@@ -7,7 +7,7 @@ const issueRouter = Router();
 issueRouter.use(validateTokenAndRole());
 issueRouter.get("/", issueController.getIssues);
 
-issueRouter.use(validateTokenAndRole(["PROJECT-MANAGER"]));
+issueRouter.use(validateTokenAndRole(["PROJECT-MANAGER", "ADMIN"]));
 issueRouter.post("/", issueController.createIssue);
 issueRouter.patch("/:issueId/assign", issueController.assignIssue);
 
