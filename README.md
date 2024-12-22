@@ -34,4 +34,19 @@ Ensure you have the following installed:
 ### **Steps**
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/DrFemzy/mently-issue-tracking-system.git
+2. Navigate to the project directory:
+  ```bash
+  cd issue-tracking-system
+3. Install dependencies:
+  ```bash
+  npm install
+4. Create a .env file in the root directory and configure the environment variables:
+  ```env
+  PORT=5000
+  MONGO_DB_CONNECTION_STRING=mongodb+srv://DrFemzy:Femzy1..,@cluster0.zwwjb.mongodb.net/IssueTrackingSystem?retryWrites=true&w=majority
+  REFRESH_TOKEN_SECRET=ref2998490338849jkdkdie9e9dud9eueuj
+  ACCESS_TOKEN_SECRET=acc39iak9do093ikd983jueie9dkdke9eue9
+5. Start the development server
+  ```bash
+  npm run start:dev
