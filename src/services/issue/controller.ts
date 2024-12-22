@@ -5,6 +5,7 @@ import {
   assignIssueValidator,
   createIssueValidator,
   getIssuesValidator,
+  updateIssueValidator,
 } from "../../validators/issue";
 import { Request, Response } from "express";
 
@@ -64,7 +65,7 @@ export class IssueController {
     });
   }
 
-  @ServiceDecorator.forRequestPayloadValidation(updateIssue)
+  @ServiceDecorator.forRequestPayloadValidation(updateIssueValidator)
   @ServiceDecorator.forCatchingErrorAndSendingToClient()
   async updateIssue(req: Request, res: Response) {
     const { issueId } = req.params;
