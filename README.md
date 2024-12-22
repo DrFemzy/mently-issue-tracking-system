@@ -39,9 +39,11 @@ Ensure you have the following installed:
 ### **Steps**
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/DrFemzy/mently-issue-tracking-system.git
-   ```
+
+```bash
+git clone https://github.com/DrFemzy/mently-issue-tracking-system.git
+```
+
 2. Navigate to the project directory:
 
 ```bash
@@ -65,7 +67,44 @@ ACCESS_TOKEN_SECRET=acc39iak9do093ikd983jueie9dkdke9eue9
 
 5. Start the development server
 
-````bash
+```bash
 npm run start:dev
-  ```
-````
+```
+
+6. Access the API at http://localhost:5000
+
+## **API Documentation**
+
+Detailed API documentation can be found in the [API Documentation](https://documenter.getpostman.com/view/18114709/2sAYJ3G2Wb)
+
+## **Admin Login Credentials**
+
+For testing purposes, you can use the following credentials to log in as an admin:
+
+- Email: adesokanemmanuelfemzy2018@gmail.com
+- Password: 12345678
+
+## **Project Structure**
+
+```plaintext
+├── src
+│   ├── auth
+│   │   ├── controller.js       # Handles authentication logic (sign-in, sign-up, refresh token)
+│   │   ├── routes.js           # Authentication routes
+│   │   ├── middleware.js       # Middleware for token validation and role checking
+│   ├── projects
+│   │   ├── controller.js       # Handles project management logic (CRUD operations)
+│   │   ├── routes.js           # Project-related routes
+│   ├── issues
+│   │   ├── controller.js       # Handles issue tracking logic (create, assign, update, list)
+│   │   ├── routes.js           # Issue-related routes
+│   ├── comments
+│   │   ├── controller.js       # Handles comment logic (add and retrieve comments)
+│   │   ├── routes.js           # Comment-related routes
+│   ├── utils
+│   │   ├── logger.js           # Utility for logging application events
+│   │   ├── errorHandler.js     # Centralized error handling utility
+├── .env                         # Environment configuration file
+├── package.json                 # Project dependencies and scripts
+├── README.md                    # Documentation for the project
+```
