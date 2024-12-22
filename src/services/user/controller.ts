@@ -71,7 +71,11 @@ class UserController {
   async refreshToken(req: Request, res: Response) {
     const cookies = req.cookies;
     if (!cookies?.jwt)
-      return respond(res, { statusCode: 401, status: "error" });
+      return respond(res, {
+        statusCode: 401,
+        status: "error",
+        message: "Refresh token not found",
+      });
     const refreshToken = cookies.jwt;
     res.clearCookie("jwt", { httpOnly: true, sameSite: "none", secure: true });
 
@@ -89,7 +93,7 @@ class UserController {
             return respond(res, {
               statusCode: 403,
               status: "error",
-              message: "Forbidden",
+              message: "Forbidden: Attempted refresh token reuse",
             }); //Forbidden
           console.log("attempted refresh token reuse!");
           const hackedUser = await userRepository.findUserByEmail(
@@ -103,7 +107,7 @@ class UserController {
       return respond(res, {
         status: "error",
         statusCode: 403,
-        message: "Forbidden",
+        message: "Forbidden: Attempted refresh token reuse",
       }); //Forbidden
     }
 
@@ -125,7 +129,7 @@ class UserController {
         if (err || foundUser.email !== decoded!.email)
           return respond(res, {
             statusCode: 403,
-            message: "Forbidden",
+            message: "Forbidden: Expired refresh token",
             status: "error",
           });
 
