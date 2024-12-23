@@ -60,7 +60,7 @@ npm install
 
 ```env
 PORT=5000
-MONGO_DB_CONNECTION_STRING=mongodb+srv://DrFemzy:Femzy1..,@cluster0.zwwjb.mongodb.net/IssueTrackingSystem?retryWrites=true&w=majority
+MONGO_DB_CONNECTION_STRING=<mongodb-connection-string (available in the mail sent)>
 REFRESH_TOKEN_SECRET=ref2998490338849jkdkdie9e9dud9eueuj
 ACCESS_TOKEN_SECRET=acc39iak9do093ikd983jueie9dkdke9eue9
 ```
